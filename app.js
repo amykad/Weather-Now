@@ -7,14 +7,11 @@ document.getElementById('city').addEventListener('input', function () {
     try {
         var city = document.getElementById('city').value;
         console.log('Şəhər adı:', city);
-  
-        const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast', {
-          params: {
-            q: city,
-            appid: '12c0b94181cc665e3e2ddd0153aafaa5',
-            units: 'metric'
-          }
-        });
+
+const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast', {
+        params: {
+          q: city,
+
   
         const currentTemperature = response.data.list[0].main.temp;
   
